@@ -5,7 +5,7 @@
 import re , colorama
 import requests
 import json
-
+import time
 # IP address to test
 def toip(ip_address):
     request_url = 'http://ip-api.com/json/' + ip_address
@@ -90,7 +90,7 @@ try:
 
             print("\033[1;31m", ip)
             try:
-
+                time.sleep(1.5)
                 print(toip(str(ip[7:]).split(":")[0]))
             except:
                 pass
